@@ -11,7 +11,9 @@ def initialize_database():
                         class_id INTEGER PRIMARY KEY AUTOINCREMENT,
                         class_name TEXT NOT NULL,
                         goal REAL DEFAULT 85.0,
-                        current_avg REAL DEFAULT 0.0)''')
+                        current_avg REAL DEFAULT 0.0),
+                        year INTEGER,
+                        term INTEGER''')
 
     cursor.execute('''CREATE TABLE IF NOT EXISTS grades (
                         grade_id INTEGER PRIMARY KEY AUTOINCREMENT,
